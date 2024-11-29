@@ -11,12 +11,12 @@ class ResultRepository(ABC):
     def add(self, result: Result) -> None:
         pass
 
-    @abstractmethods
+    @abstractmethod
     def get_all(self) -> List[Result]:
         pass
 
 class JsonResultRepository(ResultRepository):
-    def init(self, file_path: str = "results.json"):
+    def __init__(self, file_path: str = "results.json"):
         self.file_path = file_path
 
     def _load_result_from_file(self) -> List[Result]:

@@ -7,10 +7,10 @@ from model import Result
 from result_repository import ResultRepository
 
 
-PATTERN = r'^\d{3}-\d{3}-\d{3}[-\s]\d{2}$'
+PATTERN = r'\d{3}-\d{3}-\d{3}[-\s]\d{2}'
 
 class RegexService:
-    def init(self, result_repository: ResultRepository):
+    def __init__(self, result_repository: ResultRepository):
         self.result_repository = result_repository
         pass
 
