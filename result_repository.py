@@ -3,7 +3,7 @@ from dataclasses import asdict
 import json
 from typing import List
 
-from ProgaLaba2.model import Result
+from model import Result
 
 
 class ResultRepository(ABC):
@@ -11,7 +11,7 @@ class ResultRepository(ABC):
     def add(self, result: Result) -> None:
         pass
 
-    @abstractmethod
+    @abstractmethods
     def get_all(self) -> List[Result]:
         pass
 
